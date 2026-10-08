@@ -1,7 +1,17 @@
 # Extension directory (tracked in its own separate GitHub repository)
 PrepMate-Extension/
 
-# Node modules & scratch
+# Academic reports & packaging files
+ass10_A40/
+*.zip
+*.pdf
+PrepMate_Complete_Submission_Report.html
+capture_screenshots.js
+generate_pdf.js
+package_submission.js
+screenshots/
+
+# System and logs
 node_modules/
 .DS_Store
 Thumbs.db
