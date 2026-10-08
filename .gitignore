@@ -1,0 +1,8 @@
+# Extension directory (tracked in its own separate GitHub repository)
+PrepMate-Extension/
+
+# Node modules & scratch
+node_modules/
+.DS_Store
+Thumbs.db
+*.log

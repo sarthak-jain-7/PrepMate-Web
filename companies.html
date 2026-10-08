@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Company Preparation Hub – PrepMate</title>
+  <meta name="description" content="Company-specific placement guides, hiring rounds, required tech skills, and preparation checklists for top tech recruiters.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Site Navigation Header -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="PrepMate Home">
+        <div class="logo-icon">🚀</div>
+        <span class="brand-name">PrepMate</span>
+        <span class="brand-badge">PRO</span>
+      </a>
+
+      <!-- Desktop & Mobile Nav Menu -->
+      <nav class="nav-menu" id="navMenu" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="aptitude.html" class="nav-link">Aptitude</a>
+        <a href="dsa.html" class="nav-link">DSA</a>
+        <a href="companies.html" class="nav-link active">Companies</a>
+        <a href="resources.html" class="nav-link">Resources</a>
+        <a href="dashboard.html" class="nav-link">Dashboard</a>
+      </nav>
+
+      <!-- Nav Actions -->
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle dark/light mode" title="Toggle theme">
+          🌙
+        </button>
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle mobile menu" aria-expanded="false">
+          ☰
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-content companies-page">
+    <div class="container">
+      
+      <!-- Page Header -->
+      <div class="section-header" style="margin-bottom: 2.5rem;">
+        <span class="section-pill">Recruitment Hub</span>
+        <h1 class="section-title">Company Preparation Guides</h1>
+        <p class="section-subtitle">Deep dive into recruitment patterns, required skill stacks, interview rounds, and preparation checklists for top employers.</p>
+      </div>
+
+      <!-- Preparation Reference Disclaimer Banner -->
+      <div style="background: var(--info-bg); border: 1px solid var(--info-border); padding: 0.85rem 1.25rem; border-radius: var(--radius-md); margin-bottom: 2rem; font-size: 0.88rem; color: var(--text-secondary); display: flex; align-items: center; gap: 0.75rem;">
+        <span style="font-size: 1.25rem;">ℹ️</span>
+        <div>
+          <strong>Academic Note:</strong> This is an educational preparation resource detailing historical interview patterns and syllabus roadmaps. This section does not represent live recruitment openings.
+        </div>
+      </div>
+
+      <!-- Search & Category Filter Bar -->
+      <div class="filter-bar">
+        <div class="search-input-wrapper">
+          <span class="search-icon">🔍</span>
+          <input type="text" class="search-input" id="companySearchInput" placeholder="Search by company name, role, or technology..." aria-label="Search companies">
+        </div>
+
+        <div class="filter-group">
+          <select class="filter-select" id="companyCategoryFilter" aria-label="Filter by Company Type">
+            <option value="all">All Categories</option>
+            <option value="Service Based">Service Based</option>
+            <option value="Product Based">Product Based</option>
+            <option value="Consulting">Consulting</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Category Filter Pills -->
+      <div class="pill-tabs" style="margin-bottom: 1.75rem;">
+        <button type="button" class="pill-tab comp-pill active" data-cat="all">All Companies (10)</button>
+        <button type="button" class="pill-tab comp-pill" data-cat="Service Based">Service Based (5)</button>
+        <button type="button" class="pill-tab comp-pill" data-cat="Product Based">Product Based (3)</button>
+        <button type="button" class="pill-tab comp-pill" data-cat="Consulting">Consulting (2)</button>
+      </div>
+
+      <!-- Companies Grid -->
+      <div class="companies-grid" id="companiesGridContainer">
+        <!-- Injected via JavaScript -->
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="brand-logo">
+            <div class="logo-icon">🚀</div>
+            <span class="brand-name">PrepMate</span>
+          </div>
+          <p class="footer-brand-desc">
+            Equipping campus students with battle-tested recruitment intelligence and practice materials.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Navigation</h4>
+          <div class="footer-links">
+            <a href="index.html" class="footer-link">Home</a>
+            <a href="aptitude.html" class="footer-link">Aptitude Quiz</a>
+            <a href="dsa.html" class="footer-link">DSA Practice</a>
+            <a href="companies.html" class="footer-link">Companies</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Quick Links</h4>
+          <div class="footer-links">
+            <a href="resources.html" class="footer-link">Core CS Notes</a>
+            <a href="dashboard.html" class="footer-link">Student Dashboard</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Academic Project</h4>
+          <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5; margin-bottom: 0.75rem;">
+            Educational Placement Portal built with Vanilla Web Stack.
+          </p>
+          <div class="footer-academic-badge">
+            🎓 Academic Demonstration
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 PrepMate. All rights reserved.</div>
+        <div>Tagline: "Prepare Smarter. Get Placement Ready."</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    // Company Page Filtering & Modal Handler
+    document.addEventListener('DOMContentLoaded', () => {
+      let currentCat = 'all';
+      let currentQuery = '';
+
+      const searchInput = document.getElementById('companySearchInput');
+      const selectFilter = document.getElementById('companyCategoryFilter');
+      const pillButtons = document.querySelectorAll('.comp-pill');
+
+      function renderCompanies() {
+        const container = document.getElementById('companiesGridContainer');
+        if (!container || !window.PREP_DATA || !PREP_DATA.companies) return;
+
+        const filtered = PREP_DATA.companies.filter(c => {
+          const matchCat = (currentCat === 'all' || c.category === currentCat);
+          const matchQuery = currentQuery === '' ||
+            c.name.toLowerCase().includes(currentQuery) ||
+            c.roles.some(r => r.toLowerCase().includes(currentQuery)) ||
+            c.importantSkills.some(s => s.toLowerCase().includes(currentQuery));
+          return matchCat && matchQuery;
+        });
+
+        if (filtered.length === 0) {
+          container.innerHTML = `
+            <div style="grid-column: 1 / -1; text-align: center; padding: 3rem; color: var(--text-muted);">
+              <h3>No companies matched your criteria</h3>
+              <p>Try refining your search terms or category filter.</p>
+            </div>
+          `;
+          return;
+        }
+
+        container.innerHTML = '';
+        filtered.forEach(c => {
+          const card = document.createElement('div');
+          card.className = 'card company-card card-interactive';
+
+          const rolesHtml = c.roles.map(r => `<span class="tag-pill">${r}</span>`).join('');
+          const skillsHtml = c.importantSkills.map(s => `<span class="tag-pill" style="background: var(--primary-50); color: var(--primary-600); border-color: var(--primary-100);">${s}</span>`).join('');
+          const checklistHtml = c.checklist.slice(0, 3).map(item => `
+            <div class="checklist-item">
+              <span class="checklist-bullet">✓</span>
+              <span>${item}</span>
+            </div>
+          `).join('');
+
+          card.innerHTML = `
+            <div class="company-card-header">
+              <div class="company-logo-avatar">${c.logoText}</div>
+              <div class="company-title-info">
+                <div class="company-name">${c.name}</div>
+                <div class="company-badge-sub">${c.badge}</div>
+              </div>
+              <span class="badge ${c.category === 'Product Based' ? 'badge-primary' : 'badge-easy'}">${c.category}</span>
+            </div>
+
+            <div class="company-section-label">Hiring Roles</div>
+            <div class="company-tags-list">${rolesHtml}</div>
+
+            <div class="company-section-label">Key Tech Skills</div>
+            <div class="company-tags-list">${skillsHtml}</div>
+
+            <div class="company-section-label">Preparation Checklist</div>
+            <div class="checklist-compact">${checklistHtml}</div>
+
+            <div style="margin-top: auto; border-top: 1px solid var(--border-color); padding-top: 1rem;">
+              <button type="button" class="btn btn-primary btn-sm" style="width: 100%;" onclick="openCompanyModal('${c.id}')">
+                View Full Interview Roadmap ➔
+              </button>
+            </div>
+          `;
+
+          container.appendChild(card);
+        });
+      }
+
+      if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+          currentQuery = e.target.value.toLowerCase().trim();
+          renderCompanies();
+        });
+      }
+
+      if (selectFilter) {
+        selectFilter.addEventListener('change', (e) => {
+          currentCat = e.target.value;
+          pillButtons.forEach(p => {
+            if (p.getAttribute('data-cat') === currentCat) p.classList.add('active');
+            else p.classList.remove('active');
+          });
+          renderCompanies();
+        });
+      }
+
+      pillButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          pillButtons.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          currentCat = btn.getAttribute('data-cat');
+          if (selectFilter) selectFilter.value = currentCat;
+          renderCompanies();
+        });
+      });
+
+      window.openCompanyModal = function(companyId) {
+        const c = PREP_DATA.companies.find(item => item.id === companyId);
+        if (!c) return;
+
+        const roundsHtml = c.interviewRounds.map((rnd, i) => `
+          <div style="padding: 0.65rem 0.85rem; background: var(--bg-surface-alt); border-radius: var(--radius-sm); margin-bottom: 0.5rem; border: 1px solid var(--border-color);">
+            <strong>Round ${i + 1}:</strong> ${rnd}
+          </div>
+        `).join('');
+
+        const checklistHtml = c.checklist.map(item => `
+          <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.4rem;">
+            <span style="color: var(--success); font-weight: bold;">✓</span>
+            <span>${item}</span>
+          </div>
+        `).join('');
+
+        const modalHtml = `
+          <p style="margin-bottom: 1rem; color: var(--text-secondary);">${c.description}</p>
+          
+          <div class="modal-section-title">🏢 Company Type & Profile</div>
+          <p><strong>Category:</strong> ${c.category} (${c.badge})</p>
+          
+          <div class="modal-section-title">🔄 Selection Process & Interview Rounds</div>
+          <div>${roundsHtml}</div>
+
+          <div class="modal-section-title">🎯 Master Preparation Checklist</div>
+          <div style="background: var(--primary-50); padding: 1rem; border-radius: var(--radius-md); border: 1px solid var(--primary-100); color: var(--text-primary);">
+            ${checklistHtml}
+          </div>
+
+          <div style="margin-top: 1.5rem; text-align: right;">
+            <button type="button" class="btn btn-secondary" onclick="closeModal()">Close Guide</button>
+          </div>
+        `;
+
+        openModal(`${c.name} – Placement Preparation Guide`, modalHtml);
+      };
+
+      // Initial render
+      renderCompanies();
+    });
+  </script>
+</body>
+</html>

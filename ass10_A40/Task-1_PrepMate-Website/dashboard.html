@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Progress Dashboard – PrepMate</title>
+  <meta name="description" content="Track your placement preparation analytics, aptitude accuracy, completed DSA challenges, and recent study activity.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Site Navigation Header -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="PrepMate Home">
+        <div class="logo-icon">🚀</div>
+        <span class="brand-name">PrepMate</span>
+        <span class="brand-badge">PRO</span>
+      </a>
+
+      <!-- Desktop & Mobile Nav Menu -->
+      <nav class="nav-menu" id="navMenu" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="aptitude.html" class="nav-link">Aptitude</a>
+        <a href="dsa.html" class="nav-link">DSA</a>
+        <a href="companies.html" class="nav-link">Companies</a>
+        <a href="resources.html" class="nav-link">Resources</a>
+        <a href="dashboard.html" class="nav-link active">Dashboard</a>
+      </nav>
+
+      <!-- Nav Actions -->
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle dark/light mode" title="Toggle theme">
+          🌙
+        </button>
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle mobile menu" aria-expanded="false">
+          ☰
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-content dashboard-page">
+    <div class="container">
+      
+      <!-- Dashboard Top Header Row -->
+      <div class="dashboard-header-row">
+        <div>
+          <span class="section-pill">Analytics & Insights</span>
+          <h1 class="section-title" style="margin-bottom: 0.25rem;">Student Preparation Dashboard</h1>
+          <p class="section-subtitle">Real-time breakdown of your placement readiness and practice metrics.</p>
+        </div>
+
+        <div>
+          <button type="button" class="btn btn-danger btn-sm" id="resetProgressBtn" title="Reset your preparation progress data">
+            🗑️ Reset Progress
+          </button>
+        </div>
+      </div>
+
+      <!-- 6 Top Summary KPI Cards -->
+      <div class="stats-cards-grid">
+        <!-- Card 1: Total Attempted -->
+        <div class="dash-stat-card">
+          <div class="dash-stat-icon icon-purple">📝</div>
+          <div class="dash-stat-info">
+            <div class="stat-value" id="statTotalQuestions">0</div>
+            <div class="stat-label">Total Questions Attempted</div>
+          </div>
+        </div>
+
+        <!-- Card 2: Correct Answers -->
+        <div class="dash-stat-card">
+          <div class="dash-stat-icon icon-emerald">✅</div>
+          <div class="dash-stat-info">
+            <div class="stat-value" id="statCorrectAnswers">0</div>
+            <div class="stat-label">Correct Answers</div>
+          </div>
+        </div>
+
+        <!-- Card 3: Accuracy -->
+        <div class="dash-stat-card">
+          <div class="dash-stat-icon icon-cyan">🎯</div>
+          <div class="dash-stat-info">
+            <div class="stat-value" id="statAccuracy">0%</div>
+            <div class="stat-label">Quiz Accuracy</div>
+          </div>
+        </div>
+
+        <!-- Card 4: Completed DSA -->
+        <div class="dash-stat-card">
+          <div class="dash-stat-icon icon-amber">💻</div>
+          <div class="dash-stat-info">
+            <div class="stat-value" id="statDsaSolved">0/20</div>
+            <div class="stat-label">Completed DSA Problems</div>
+          </div>
+        </div>
+
+        <!-- Card 5: Study Sessions -->
+        <div class="dash-stat-card">
+          <div class="dash-stat-icon icon-pink">⏱</div>
+          <div class="dash-stat-info">
+            <div class="stat-value" id="statStudySessions">0</div>
+            <div class="stat-label">Quiz Sessions</div>
+          </div>
+        </div>
+
+        <!-- Card 6: Overall Progress -->
+        <div class="dash-stat-card" style="border-color: var(--primary-500); background: linear-gradient(135deg, var(--bg-surface) 0%, var(--primary-50) 100%);">
+          <div class="dash-stat-icon icon-blue">🚀</div>
+          <div class="dash-stat-info">
+            <div class="stat-value" style="color: var(--primary-600);" id="statOverallProgress">0%</div>
+            <div class="stat-label">Overall Readiness</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Dashboard Panels Grid -->
+      <div class="dashboard-sections-grid">
+        
+        <!-- Left Column: Detailed Progress Bars -->
+        <div style="display: flex; flex-direction: column; gap: 1.75rem;">
+          
+          <!-- Section 1: Overall Preparation -->
+          <div class="dash-panel">
+            <div class="dash-panel-title">
+              <span>1. Overall Placement Readiness</span>
+              <span class="badge badge-primary" id="overallScoreLabel">0%</span>
+            </div>
+            <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 1rem;">
+              Calculated based on solved DSA challenges, quiz accuracy, and study sessions completed.
+            </p>
+            <div class="progress-container" style="height: 12px; margin-bottom: 0.5rem;">
+              <div class="progress-bar-fill" id="overallProgressFill" style="width: 0%;"></div>
+            </div>
+          </div>
+
+          <!-- Section 2: Aptitude Progress -->
+          <div class="dash-panel">
+            <div class="dash-panel-title">
+              <span>2. Aptitude Mastery</span>
+              <a href="aptitude.html" class="btn btn-outline btn-sm">Practice Aptitude ➔</a>
+            </div>
+            
+            <div class="bar-progress-list">
+              <div class="bar-progress-item">
+                <div class="bar-labels">
+                  <span>Questions Attempted & Accuracy</span>
+                  <span id="aptMasteryText">0 Attempted (0% Acc)</span>
+                </div>
+                <div class="progress-container">
+                  <div class="progress-bar-fill" id="aptMasteryFill" style="width: 0%; background: var(--primary-gradient);"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Section 3: DSA Progress by Difficulty -->
+          <div class="dash-panel">
+            <div class="dash-panel-title">
+              <span>3. Data Structures & Algorithms (DSA)</span>
+              <a href="dsa.html" class="btn btn-outline btn-sm">Solve More DSA ➔</a>
+            </div>
+
+            <div class="bar-progress-list">
+              <!-- Easy DSA -->
+              <div class="bar-progress-item">
+                <div class="bar-labels">
+                  <span style="color: var(--diff-easy); font-weight: 700;">🟢 Easy Problems</span>
+                  <span id="easyDsaText">0 / 9 (0%)</span>
+                </div>
+                <div class="progress-container">
+                  <div class="progress-bar-fill" id="easyDsaFill" style="width: 0%; background: var(--diff-easy);"></div>
+                </div>
+              </div>
+
+              <!-- Medium DSA -->
+              <div class="bar-progress-item">
+                <div class="bar-labels">
+                  <span style="color: var(--diff-medium); font-weight: 700;">🟡 Medium Problems</span>
+                  <span id="medDsaText">0 / 8 (0%)</span>
+                </div>
+                <div class="progress-container">
+                  <div class="progress-bar-fill" id="medDsaFill" style="width: 0%; background: var(--diff-medium);"></div>
+                </div>
+              </div>
+
+              <!-- Hard DSA -->
+              <div class="bar-progress-item">
+                <div class="bar-labels">
+                  <span style="color: var(--diff-hard); font-weight: 700;">🔴 Hard Problems</span>
+                  <span id="hardDsaText">0 / 3 (0%)</span>
+                </div>
+                <div class="progress-container">
+                  <div class="progress-bar-fill" id="hardDsaFill" style="width: 0%; background: var(--diff-hard);"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right Column: Interview Readiness & Recent Activity -->
+        <div style="display: flex; flex-direction: column; gap: 1.75rem;">
+          
+          <!-- Section 4: Interview Preparation Tracker -->
+          <div class="dash-panel">
+            <div class="dash-panel-title">
+              <span>4. Interview Preparation Status</span>
+              <span class="badge badge-easy">Roadmap</span>
+            </div>
+            <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 1.25rem;">
+              Key recruitment milestones recommended before attending campus drives:
+            </p>
+
+            <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+              <div style="display: flex; align-items: center; justify-content: space-between; padding: 0.65rem 0.85rem; background: var(--bg-surface-alt); border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+                <span style="font-size: 0.88rem; font-weight: 600;">Core CS Fundamentals</span>
+                <a href="resources.html" class="btn btn-secondary btn-sm">Study</a>
+              </div>
+              <div style="display: flex; align-items: center; justify-content: space-between; padding: 0.65rem 0.85rem; background: var(--bg-surface-alt); border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+                <span style="font-size: 0.88rem; font-weight: 600;">Company Round Guides</span>
+                <a href="companies.html" class="btn btn-secondary btn-sm">Explore</a>
+              </div>
+              <div style="display: flex; align-items: center; justify-content: space-between; padding: 0.65rem 0.85rem; background: var(--bg-surface-alt); border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+                <span style="font-size: 0.88rem; font-weight: 600;">HR & Behavioral (STAR)</span>
+                <a href="resources.html" class="btn btn-secondary btn-sm">Read</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Section 5: Recent Activity Feed -->
+          <div class="dash-panel" style="flex: 1;">
+            <div class="dash-panel-title">
+              <span>5. Recent Activity Feed</span>
+              <span class="badge" style="background: var(--bg-surface-alt); border: 1px solid var(--border-color); color: var(--text-secondary);">Live Log</span>
+            </div>
+
+            <div class="activity-feed" id="recentActivityFeed">
+              <!-- Injected dynamically by dashboard.js -->
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="brand-logo">
+            <div class="logo-icon">🚀</div>
+            <span class="brand-name">PrepMate</span>
+          </div>
+          <p class="footer-brand-desc">
+            Continuous progress tracking for your campus recruitment journey.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Navigation</h4>
+          <div class="footer-links">
+            <a href="index.html" class="footer-link">Home</a>
+            <a href="aptitude.html" class="footer-link">Aptitude Quiz</a>
+            <a href="dsa.html" class="footer-link">DSA Practice</a>
+            <a href="companies.html" class="footer-link">Companies</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Quick Links</h4>
+          <div class="footer-links">
+            <a href="resources.html" class="footer-link">Learning Hub</a>
+            <a href="dashboard.html" class="footer-link">Student Dashboard</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Academic Project</h4>
+          <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5; margin-bottom: 0.75rem;">
+            Educational Placement Portal built with Vanilla Web Stack.
+          </p>
+          <div class="footer-academic-badge">
+            🎓 Academic Demonstration
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 PrepMate. All rights reserved.</div>
+        <div>Tagline: "Prepare Smarter. Get Placement Ready."</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

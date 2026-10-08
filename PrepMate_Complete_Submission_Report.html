@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PrepMate – Academic Project Submission Report</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 20mm 18mm 20mm 18mm;
+    }
+    body {
+      font-family: 'Calibri', 'Segoe UI', -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+      color: #1a1a1a;
+      line-height: 1.5;
+      font-size: 11pt;
+      margin: 0;
+      padding: 0;
+    }
+    .college-header {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+    .college-name {
+      font-size: 16pt;
+      font-weight: bold;
+      color: #1e3a8a;
+      margin-bottom: 3px;
+    }
+    .dept-name {
+      font-size: 13pt;
+      font-weight: 600;
+      color: #1e293b;
+      margin-bottom: 3px;
+    }
+    .course-name {
+      font-size: 12pt;
+      color: #b91c1c;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+    .assignment-title {
+      font-size: 15pt;
+      font-weight: bold;
+      color: #0f172a;
+      margin-top: 10px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #3b82f6;
+    }
+    h2 {
+      font-size: 13pt;
+      font-weight: bold;
+      color: #1e3a8a;
+      margin-top: 24px;
+      margin-bottom: 10px;
+      page-break-after: avoid;
+    }
+    h3 {
+      font-size: 11.5pt;
+      font-weight: bold;
+      color: #334155;
+      margin-top: 16px;
+      margin-bottom: 6px;
+      page-break-after: avoid;
+    }
+    p {
+      margin: 6px 0;
+      text-align: justify;
+    }
+    ul, ol {
+      margin: 6px 0 12px 0;
+      padding-left: 22px;
+    }
+    li {
+      margin-bottom: 4px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 14px 0;
+      font-size: 10pt;
+    }
+    th, td {
+      border: 1px solid #94a3b8;
+      padding: 7px 10px;
+      text-align: left;
+    }
+    th {
+      background-color: #f1f5f9;
+      color: #0f172a;
+      font-weight: bold;
+    }
+    .prompt-block {
+      background: #f8fafc;
+      border: 1px solid #cbd5e1;
+      border-left: 4px solid #3b82f6;
+      padding: 8px 12px;
+      margin: 10px 0;
+      font-size: 10pt;
+      border-radius: 4px;
+    }
+    .prompt-label {
+      font-weight: bold;
+      color: #1e3a8a;
+    }
+    .screenshot-box {
+      margin: 16px 0;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      overflow: hidden;
+      page-break-inside: avoid;
+      background: #ffffff;
+    }
+    .screenshot-img {
+      width: 100%;
+      max-height: 400px;
+      object-fit: contain;
+      display: block;
+      background: #f8fafc;
+    }
+    .screenshot-caption {
+      padding: 6px 10px;
+      font-size: 9.5pt;
+      font-weight: 600;
+      color: #475569;
+      background: #f1f5f9;
+      border-top: 1px solid #e2e8f0;
+      text-align: center;
+    }
+    .page-break {
+      page-break-before: always;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header matching institutional format -->
+  <div class="college-header">
+    <div class="college-name">Walchand Institute of Technology, Solapur</div>
+    <div class="dept-name">Department of Information Technology</div>
+    <div class="course-name">Course: Program Elective – V (Prompt Engineering)</div>
+    <div class="assignment-title">AI-Assisted Web & Chrome Extension Development (PrepMate)</div>
+  </div>
+
+  <!-- SECTION 1 -->
+  <h2>1. Overview of Project & Deliverables</h2>
+  <p>
+    This project demonstrates the practical application of <strong>Prompt Engineering</strong> and <strong>Generative AI assistance</strong> (using Antigravity AI by Google DeepMind) to build two end-to-end, production-grade applications for campus placement preparation:
+  </p>
+  <ul>
+    <li><strong>Task 1 – Web Application:</strong> <em>PrepMate – Student Placement Preparation Portal</em>, an interactive web portal built with pure HTML5, Vanilla CSS3, Vanilla JavaScript, and LocalStorage. It provides Aptitude testing, DSA practice, Company interview guides, Core CS revision roadmaps, and a Student progress dashboard.</li>
+    <li><strong>Task 2 – Chrome Extension:</strong> <em>PrepMate – Placement Focus Assistant</em>, a browser-level productivity assistant built under Chrome Extension Manifest V3 with a Pomodoro focus timer, background alarms, notifications, webpage readability analyzer, and quick placement notes.</li>
+  </ul>
+
+  <!-- SECTION 2 -->
+  <h2>2. Three Original and Improved Prompts Used During Development</h2>
+
+  <h3>Prompt 1: Website Architecture & Modular Design System</h3>
+  <div class="prompt-block">
+    <div class="prompt-label">Original Prompt:</div>
+    Create a placement preparation website with aptitude, DSA, companies, resources, and dashboard using HTML, CSS, and JS.
+  </div>
+  <div class="prompt-block">
+    <div class="prompt-label">Improved Prompt:</div>
+    <strong>Role:</strong> Senior Full-Stack Frontend Developer & UI/UX Designer<br>
+    <strong>Context:</strong> College students preparing for technical software placement interviews.<br>
+    <strong>Constraints:</strong> Pure HTML5, Vanilla CSS3, Vanilla JavaScript, LocalStorage. No React, No Bootstrap, No Tailwind, No backend. Fully responsive across 1920px, 1366px, 768px, 390px.<br>
+    <strong>Pattern:</strong> Brand Identity &rarr; Component Design System &rarr; State Management &rarr; Responsive Layout.<br>
+    <strong>Output:</strong> Complete multi-page code structure (index.html, aptitude.html, dsa.html, companies.html, resources.html, dashboard.html, css/style.css, js/data.js, js/main.js).<br>
+    <strong>Techniques:</strong> Role Prompting + Structured Constraint Prompting + Component-Driven Architecture.
+  </div>
+  <p><strong>Sample Original Output:</strong> A basic HTML page with plain styling and non-functional buttons.</p>
+  <p><strong>Sample Improved Output:</strong> A comprehensive 6-page responsive web portal with custom CSS variables, Dark/Light mode, interactive state handling, and zero external dependencies.</p>
+  <p><strong>Observation:</strong> Adding role context, explicit framework constraints, and structured output patterns generated modular, maintainable, and bug-free code.</p>
+
+  <h3>Prompt 2: Interactive Aptitude Quiz Engine with Scoring & Review</h3>
+  <div class="prompt-block">
+    <div class="prompt-label">Original Prompt:</div>
+    Make an aptitude quiz in JavaScript with questions and score.
+  </div>
+  <div class="prompt-block">
+    <div class="prompt-label">Improved Prompt:</div>
+    <strong>Role:</strong> JavaScript Software Engineer & Assessment Architect<br>
+    <strong>Context:</strong> Campus placement aptitude evaluation covering Quantitative, Logical, and Verbal topics.<br>
+    <strong>Constraints:</strong> Store state in LocalStorage (prepmate_quiz_results), handle Previous/Next navigation, live question counter, dynamic progress bar percentage, and step-by-step mathematical explanation review.<br>
+    <strong>Pattern:</strong> State Initialization &rarr; DOM Rendering &rarr; Scoring Algorithm &rarr; Review Generation &rarr; LocalStorage Persistence.<br>
+    <strong>Output:</strong> Modular ES6 JavaScript implementation in js/aptitude.js.<br>
+    <strong>Techniques:</strong> Role Prompting + Chain-of-Thought State Transition + Output Formatting.
+  </div>
+  <p><strong>Sample Original Output:</strong> A simplistic alert-based score calculation without category filters or explanations.</p>
+  <p><strong>Sample Improved Output:</strong> An interactive quiz arena with category filters, dynamic progress bars, detailed accuracy breakdown, and step-by-step mathematical review.</p>
+  <p><strong>Observation:</strong> Specifying exact state keys and review requirements produced an assessment system ready for deployment.</p>
+
+  <div class="page-break"></div>
+
+  <h3>Prompt 3: Manifest V3 Chrome Extension with Background Alarm Persistence</h3>
+  <div class="prompt-block">
+    <div class="prompt-label">Original Prompt:</div>
+    Build a Chrome extension timer and note taker for students.
+  </div>
+  <div class="prompt-block">
+    <div class="prompt-label">Improved Prompt:</div>
+    <strong>Role:</strong> Senior Chrome Extension Engineer<br>
+    <strong>Context:</strong> Productivity assistant for college students attending online tests and reading coding articles.<br>
+    <strong>Constraints:</strong> Manifest V3 compliance, minimal permissions (storage, notifications, alarms, activeTab, scripting), service worker background lifecycle, content script DOM TreeWalker.<br>
+    <strong>Pattern:</strong> Manifest Config &rarr; Service Worker Alarms &rarr; Content Script Analyzer &rarr; Popup UI Controller.<br>
+    <strong>Output:</strong> manifest.json, background.js, content.js, popup.html, popup.css, popup.js, icons.<br>
+    <strong>Techniques:</strong> Role Prompting + Few-shot API patterns + Security-first Constraint Prompting.
+  </div>
+  <p><strong>Sample Original Output:</strong> A Manifest V2 popup timer that resets whenever the user closes the popup.</p>
+  <p><strong>Sample Improved Output:</strong> A robust Manifest V3 extension with continuous background alarm countdowns, system notifications, webpage reading time extraction, and offline storage.</p>
+  <p><strong>Observation:</strong> Explicitly commanding service worker lifecycle patterns prevented timer termination bugs upon popup dismiss.</p>
+
+  <!-- SECTION 3 -->
+  <h2>3. Comparison Table (Prompt Quality & Output Metrics)</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Feature / Dimension</th>
+        <th>Original Prompt Approach</th>
+        <th>Improved Prompt Engineering Approach</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Clarity & Specification</strong></td>
+        <td>Low (Vague requirements)</td>
+        <td>High (Exact file structure, APIs, and keys defined)</td>
+      </tr>
+      <tr>
+        <td><strong>Context & Audience</strong></td>
+        <td>Missing</td>
+        <td>Provided (Engineering students preparing for placements)</td>
+      </tr>
+      <tr>
+        <td><strong>Architectural Structure</strong></td>
+        <td>Monolithic / Unstructured</td>
+        <td>Well-Organized (Separation of Data, UI, and Business Logic)</td>
+      </tr>
+      <tr>
+        <td><strong>Technology Constraints</strong></td>
+        <td>Unenforced (Risk of unwanted frameworks)</td>
+        <td>Strictly Enforced (Vanilla HTML5/CSS3/JS, Manifest V3)</td>
+      </tr>
+      <tr>
+        <td><strong>Error Handling</strong></td>
+        <td>Minimal / Missing</td>
+        <td>Comprehensive (Safe DOM access, URL safety checks)</td>
+      </tr>
+      <tr>
+        <td><strong>State Persistence</strong></td>
+        <td>Lost on reload</td>
+        <td>Persistent via LocalStorage and Chrome Storage APIs</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- SECTION 4 -->
+  <h2>4. Demonstration of Prompt Types Used</h2>
+
+  <p><strong>Zero-shot:</strong><br>
+  <em>Prompt:</em> "Write CSS custom properties for a student dark/light theme palette."<br>
+  <em>AI Output:</em> Generated standard CSS variables for surfaces, text, and primary indigo-violet accents.<br>
+  <em>Observation:</em> Works effectively for well-defined standard styling tokens.</p>
+
+  <p><strong>One-shot:</strong><br>
+  <em>Prompt:</em> "Format a DSA problem with title, topic, difficulty, complexity, and hints following this sample: [Sample Object]. Now format Binary Search and Kadane's Algorithm."<br>
+  <em>AI Output:</em> Produced uniformly structured problem data matching the schema.<br>
+  <em>Observation:</em> Guarantees schema consistency across the entire dataset.</p>
+
+  <p><strong>Few-shot:</strong><br>
+  <em>Prompt:</em> "Generate company hiring roadmaps for TCS, Infosys, and Amazon with roles, skills, and rounds following 3 provided exemplar schemas."<br>
+  <em>AI Output:</em> Generated precise, standardized recruitment guide objects.<br>
+  <em>Observation:</em> High structural consistency for complex nested data.</p>
+
+  <p><strong>Role Prompting:</strong><br>
+  <em>Prompt:</em> "Act as a Lead Chrome Extension Security Auditor. Review content.js to ensure zero sensitive DOM data is leaked."<br>
+  <em>AI Output:</em> Refined TreeWalker to strictly filter out password, form, script, and hidden nodes.<br>
+  <em>Observation:</em> Ensures industry-standard security and privacy compliance.</p>
+
+  <p><strong>Chain-of-Thought (CoT):</strong><br>
+  <em>Prompt:</em> "Explain step-by-step how to handle the Chrome Extension popup close lifecycle so the timer alarm does not terminate."<br>
+  <em>AI Output:</em> Outlined target timestamp calculation &rarr; storage update &rarr; chrome.alarms scheduling &rarr; popup reopen offset calculation.<br>
+  <em>Observation:</em> Eliminates state synchronization bugs across asynchronous workers.</p>
+
+  <div class="page-break"></div>
+
+  <!-- SECTION 5: SCREENSHOTS -->
+  <h2>5. Demonstration & Visual Evidence</h2>
+
+  <h3>5.1 Web Application Screenshots (Task 1)</h3>
+
+  <div class="screenshot-box">
+    <img src="screenshots/01_home_page.png" class="screenshot-img" alt="Home Page">
+    <div class="screenshot-caption">Figure 1: Home Landing Page (index.html) – Hero banner, statistics counters, and feature cards.</div>
+  </div>
+
+  <div class="screenshot-box">
+    <img src="screenshots/02_aptitude_quiz.png" class="screenshot-img" alt="Aptitude Quiz">
+    <div class="screenshot-caption">Figure 2: Aptitude Practice Arena (aptitude.html) – Category filters, question timer, and progress bar.</div>
+  </div>
+
+  <div class="screenshot-box">
+    <img src="screenshots/03_dsa_practice.png" class="screenshot-img" alt="DSA Practice">
+    <div class="screenshot-caption">Figure 3: DSA Practice Hub (dsa.html) – Real-time search, difficulty filters, and interactive modal.</div>
+  </div>
+
+  <div class="page-break"></div>
+
+  <div class="screenshot-box">
+    <img src="screenshots/04_companies_guide.png" class="screenshot-img" alt="Companies Hub">
+    <div class="screenshot-caption">Figure 4: Company Preparation Hub (companies.html) – Hiring rounds and checklists for top recruiters.</div>
+  </div>
+
+  <div class="screenshot-box">
+    <img src="screenshots/05_resources_hub.png" class="screenshot-img" alt="Learning Resources">
+    <div class="screenshot-caption">Figure 5: Learning Resources Hub (resources.html) – Core CS roadmaps and interview questions modal.</div>
+  </div>
+
+  <div class="screenshot-box">
+    <img src="screenshots/06_dashboard_progress.png" class="screenshot-img" alt="Student Dashboard">
+    <div class="screenshot-caption">Figure 6: Student Progress Dashboard (dashboard.html) – Real-time metrics, readiness gauges, and activity log.</div>
+  </div>
+
+  <div class="page-break"></div>
+
+  <h3>5.2 Chrome Extension Screenshot (Task 2)</h3>
+
+  <div class="screenshot-box" style="max-width: 420px; margin: 0 auto 20px auto;">
+    <img src="screenshots/07_chrome_extension_popup.png" class="screenshot-img" style="max-height: 480px;" alt="Chrome Extension">
+    <div class="screenshot-caption">Figure 7: Chrome Extension Popup (popup.html) – Pomodoro timer, focus stopwatch, study stats, reading analyzer, and notes.</div>
+  </div>
+
+  <!-- SECTION 6: ANALYSIS -->
+  <h2>6. Technical & Prompt Engineering Analysis</h2>
+  <p>
+    Prompt engineering significantly enhances the quality, safety, and reliability of AI-assisted software development. Simple, unconstrained prompts typically produce incomplete or generic code with incompatible libraries. By systematically applying role assignment, audience context, strict architectural constraints (such as vanilla web technologies and Manifest V3 specifications), and predefined response patterns, the generated deliverables become accurate, robust, and directly executable.
+  </p>
+  <p>
+    In this assignment, Chain-of-Thought prompting resolved complex asynchronous timing challenges in Chrome service workers, while Few-Shot prompting maintained strict data integrity across 18 aptitude questions, 20 DSA challenges, and 10 company preparation roadmaps. Role prompting ensured modern aesthetic standards in Vanilla CSS without relying on heavy third-party CSS frameworks.
+  </p>
+
+  <!-- SECTION 7: CONCLUSION -->
+  <h2>7. Conclusion</h2>
+  <p>
+    This project demonstrates that combining structured prompt engineering techniques with iterative AI-assisted development produces professional, accessible, and high-performance software applications. Both the <strong>PrepMate Placement Preparation Web Portal</strong> and the <strong>PrepMate Chrome Extension</strong> are fully functional, thoroughly tested, and ready for deployment.
+  </p>
+
+</body>
+</html>
